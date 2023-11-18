@@ -1,0 +1,233 @@
+{
+  "name": "pause",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "MPzxn",
+  "actions": [
+    {
+      "queueObject": null,
+      "varName0": null,
+      "info": "2",
+      "storage": "1",
+      "varName": "isplaying",
+      "name": "Store Queue Info"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "storage": "1",
+      "varName2": "robot",
+      "name": "Get Bot as Member"
+    },
+    {
+      "storage": "2",
+      "varName": "playing",
+      "comparison": "1",
+      "value": "false",
+      "branch": {
+        "iftrue": "4",
+        "iffalse": "0",
+        "iftrueVal": "noplay"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "4",
+      "varName2": "",
+      "branch": {
+        "iftrue": "0",
+        "iffalse": "4",
+        "iffalseVal": "novc"
+      },
+      "name": "Check If Member"
+    },
+    {
+      "member": "2",
+      "varName": "robot",
+      "info": "4",
+      "varName2": "",
+      "branch": {
+        "iftrue": "0",
+        "iffalse": "4",
+        "iffalseVal": "rbtnovc"
+      },
+      "name": "Check If Member"
+    },
+    {
+      "storage": "2",
+      "varName": "bot_pause",
+      "comparison": "1",
+      "value": "1",
+      "branch": {
+        "iftrue": "0",
+        "iffalse": "4",
+        "iffalseVal": "wrong"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Music Paused",
+          "url": "",
+          "color": "",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "The music has has been been paused.",
+          "fields": [],
+          "author": "Brain created by Xeify",
+          "authorUrl": "",
+          "authorIcon": "https://cdn.discordapp.com/avatars/264126470002180099/f67861e74b7792dee02842f3ba4076a8.webp",
+          "footerText": "",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "action": "1",
+      "volume": "",
+      "bitrate": "auto",
+      "name": "Control Music"
+    },
+    {
+      "storage": "2",
+      "varName": "bot_pause",
+      "changeType": "0",
+      "value": "0",
+      "name": "Control Variable"
+    },
+    {
+      "storage": "2",
+      "varName": "bot_pause",
+      "name": "Save Variable"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "anchorName": "novc",
+      "name": "Action Anchor"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "You are not connected to a voice channel!",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [],
+      "reply": true,
+      "ephemeral": true,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "anchorName": "rbtnovc",
+      "name": "Action Anchor"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Brain is not connected to a voice channel!",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [],
+      "reply": true,
+      "ephemeral": true,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "anchorName": "wrong",
+      "name": "Action Anchor"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Brain's music system is already paused.",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [],
+      "reply": true,
+      "ephemeral": true,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "anchorName": "noplay",
+      "name": "Action Anchor"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Brain is not currently playing music in a voice channel!",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [],
+      "reply": true,
+      "ephemeral": true,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    }
+  ],
+  "comType": "4",
+  "description": "Pauses the current song/music"
+}

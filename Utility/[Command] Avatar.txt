@@ -1,0 +1,64 @@
+{
+  "name": "avatar",
+  "permissions": "NONE",
+  "restriction": "1",
+  "actions": [
+    {
+      "member": "0",
+      "varName": "",
+      "info": "31",
+      "storage": "1",
+      "varName2": "avatar",
+      "name": "Store Member Info"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Discord User's Avatar",
+          "url": "",
+          "color": "",
+          "timestamp": "true",
+          "imageUrl": "",
+          "thumbUrl": "${tempVars(\"avatar\")}",
+          "description": "${slashParams(\"user\")}'s Avatar as per request.",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    }
+  ],
+  "_id": "qLxJy",
+  "comType": "4",
+  "parameters": [
+    {
+      "name": "user",
+      "description": "",
+      "type": "USER",
+      "required": true,
+      "choices": null
+    }
+  ]
+}

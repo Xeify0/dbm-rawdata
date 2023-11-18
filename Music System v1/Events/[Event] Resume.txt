@@ -1,0 +1,20 @@
+{
+  "name": "[Music] Resume",
+  "temp": "",
+  "event-type": "On Audio Resume",
+  "_id": "LNiAP",
+  "actions": [
+    {
+      "storage": "2",
+      "varName": "bot_pause",
+      "changeType": "0",
+      "value": "0",
+      "name": "Control Variable"
+    },
+    {
+      "storage": "2",
+      "varName": "bot_pause",
+      "name": "Save Variable"
+    }
+  ]
+}

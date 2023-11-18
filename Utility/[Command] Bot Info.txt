@@ -1,0 +1,147 @@
+{
+  "name": "botinfo",
+  "permissions": "NONE",
+  "permissions2": "NONE",
+  "restriction": "1",
+  "_id": "jQcQk",
+  "actions": [
+    {
+      "server": "0",
+      "varName": "",
+      "storage": "1",
+      "varName2": "Bot",
+      "name": "Get Bot as Member"
+    },
+    {
+      "member": "2",
+      "varName": "Bot",
+      "info": "2",
+      "storage": "1",
+      "varName2": "Bot Display Name",
+      "name": "Store Member Info"
+    },
+    {
+      "info": "9",
+      "storage": "1",
+      "varName2": "voiceconnections",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "32",
+      "storage": "1",
+      "varName2": "Ammount of Commands",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "4",
+      "storage": "1",
+      "varName2": "Ammount of Users",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "23",
+      "storage": "1",
+      "varName2": "Uptime in Days",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "24",
+      "storage": "1",
+      "varName2": "Uptime in Hours",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "25",
+      "storage": "1",
+      "varName2": "Uptime in Minutes",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "26",
+      "storage": "1",
+      "varName2": "Uptime in Secconds",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "3",
+      "storage": "1",
+      "varName2": "Ammount of guilds",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "2",
+      "storage": "1",
+      "varName2": "ping",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Bot Stats",
+          "url": "",
+          "color": "",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "",
+          "fields": [
+            {
+              "name": "Bot Version",
+              "value": "```1.1 Alpha```",
+              "inline": "true"
+            },
+            {
+              "name": "Up Time",
+              "value": "```${tempVars(\"Uptime in Days\")} Days, ${tempVars(\"Uptime in Hours\")} Hours, ${tempVars(\"Uptime in Minutes\")} Minutes, ${tempVars(\"Uptime in Secconds\")} Secconds```\n\n",
+              "inline": "true"
+            },
+            {
+              "name": "Brains Ping",
+              "value": "```${tempVars(\"ping\")}```",
+              "inline": "true"
+            },
+            {
+              "name": "Watching",
+              "value": "```${tempVars(\"Ammount of guilds\")} Servers```\n",
+              "inline": "true"
+            },
+            {
+              "name": "Watching Over",
+              "value": "```${tempVars(\"Ammount of Users\")} Users```\n",
+              "inline": "true"
+            },
+            {
+              "name": "Playing Music For",
+              "value": "```${tempVars(\"voiceconnections\")} Voice chats```",
+              "inline": "true"
+            }
+          ],
+          "author": "Bot created by Xeify",
+          "authorUrl": "",
+          "authorIcon": "https://cdn.discordapp.com/avatars/264126470002180099/f67861e74b7792dee02842f3ba4076a8.png?size=4096",
+          "footerText": "",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ],
+  "comType": "4",
+  "description": "Information about the bot",
+  "parameters": []
+}

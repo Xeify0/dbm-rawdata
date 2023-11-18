@@ -1,0 +1,175 @@
+{
+  "name": "queue",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "MdFHM",
+  "actions": [
+    {
+      "queueObject": null,
+      "varName0": null,
+      "info": "6",
+      "storage": "1",
+      "varName": "1",
+      "name": "Store Queue Info"
+    },
+    {
+      "queueObject": null,
+      "varName0": null,
+      "info": "3",
+      "storage": "1",
+      "varName": "repeat?",
+      "name": "Store Queue Info"
+    },
+    {
+      "storage": "1",
+      "varName": "repeat?",
+      "comparison": "1",
+      "value": "0",
+      "branch": {
+        "iftrue": "0",
+        "iffalse": "2",
+        "iffalseVal": "9"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "trackObject": "1",
+      "varName": "1",
+      "info": "0",
+      "storage": "1",
+      "varName1": "currenttrack",
+      "name": "Store Track Info"
+    },
+    {
+      "queueObject": null,
+      "varName0": null,
+      "info": "5",
+      "storage": "1",
+      "varName": "tracks",
+      "name": "Store Queue Info"
+    },
+    {
+      "queueObject": null,
+      "varName0": null,
+      "info": "4",
+      "storage": "1",
+      "varName": "test",
+      "name": "Store Queue Info"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Queue",
+          "url": "",
+          "color": "048ec3",
+          "timestamp": "true",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "${tempVars(\"tracks\")}\n\n\n**Currently Playing**:\n`${tempVars(\"currenttrack\")}`\n${tempVars(\"test\")}",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "queueObject": null,
+      "varName0": null,
+      "info": "4",
+      "storage": "1",
+      "varName": "test",
+      "name": "Store Queue Info"
+    },
+    {
+      "trackObject": "1",
+      "varName": "1",
+      "info": "0",
+      "storage": "1",
+      "varName1": "currenttrack",
+      "name": "Store Track Info"
+    },
+    {
+      "queueObject": null,
+      "varName0": null,
+      "info": "5",
+      "storage": "1",
+      "varName": "tracks",
+      "name": "Store Queue Info"
+    },
+    {
+      "queueObject": null,
+      "varName0": null,
+      "info": "3",
+      "storage": "1",
+      "varName": "repeat?",
+      "name": "Store Queue Info"
+    },
+    {
+      "queueObject": null,
+      "varName0": null,
+      "info": "6",
+      "storage": "1",
+      "varName": "1",
+      "name": "Store Queue Info"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Queue ",
+          "url": "",
+          "color": "048ec3",
+          "timestamp": "true",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "${tempVars(\"tracks\")}\n\n\n**Currently Playing**:\n`${tempVars(\"currenttrack\")}`\n${tempVars(\"test\")}\n\n🔁 Queue is currently looped",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ],
+  "comType": "4",
+  "description": "Lists track in queue"
+}

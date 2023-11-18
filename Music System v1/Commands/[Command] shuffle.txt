@@ -1,0 +1,168 @@
+{
+  "name": "shuffle",
+  "permissions": "NONE",
+  "permissions2": "NONE",
+  "restriction": "1",
+  "_id": "RcKAB",
+  "actions": [
+    {
+      "queueObject": null,
+      "varName0": null,
+      "info": "2",
+      "storage": "1",
+      "varName": "isplaying",
+      "name": "Store Queue Info"
+    },
+    {
+      "storage": "2",
+      "varName": "playing",
+      "comparison": "1",
+      "value": "false",
+      "branch": {
+        "iftrue": "4",
+        "iffalse": "0",
+        "iftrueVal": "noplay"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "4",
+      "varName2": "",
+      "branch": {
+        "iftrue": "0",
+        "iffalse": "4",
+        "iffalseVal": "novc"
+      },
+      "name": "Check If Member"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "storage": "1",
+      "varName2": "robot",
+      "name": "Get Bot as Member"
+    },
+    {
+      "member": "2",
+      "varName": "robot",
+      "info": "4",
+      "varName2": "",
+      "branch": {
+        "iftrue": "0",
+        "iffalse": "4",
+        "iffalseVal": "rbtnovc"
+      },
+      "name": "Check If Member"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "`🔀 Shuffling queue.`\n",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [],
+      "reply": true,
+      "ephemeral": true,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "1",
+      "varName2": "stopsongdel",
+      "name": "Send Message"
+    },
+    {
+      "action": "6",
+      "volume": "",
+      "bitrate": "auto",
+      "name": "Control Music"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "anchorName": "novc",
+      "name": "Action Anchor"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "You are not connected to a voice channel!",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [],
+      "reply": true,
+      "ephemeral": true,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "anchorName": "rbtnovc",
+      "name": "Action Anchor"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Brain is not connected to a voice channel!",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [],
+      "reply": true,
+      "ephemeral": true,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "anchorName": "noplay",
+      "name": "Action Anchor"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Brain is not currently playing music in a voice channel!",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [],
+      "reply": true,
+      "ephemeral": true,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    }
+  ],
+  "comType": "4",
+  "description": "Shuffles music queue"
+}

@@ -1,0 +1,236 @@
+{
+  "name": "volume",
+  "permissions": "NONE",
+  "permissions2": "NONE",
+  "restriction": "1",
+  "_id": "OwFDQ",
+  "actions": [
+    {
+      "queueObject": null,
+      "varName0": null,
+      "info": "2",
+      "storage": "1",
+      "varName": "isplaying",
+      "name": "Store Queue Info"
+    },
+    {
+      "storage": "2",
+      "varName": "playing",
+      "comparison": "1",
+      "value": "false",
+      "branch": {
+        "iftrue": "4",
+        "iffalse": "0",
+        "iftrueVal": "noplay"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "storage": "4",
+      "varName": "volume",
+      "comparison": "4",
+      "value": "200",
+      "branch": {
+        "iftrue": "4",
+        "iffalse": "0",
+        "iftrueVal": "nonum"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "storage": "4",
+      "varName": "volume",
+      "comparison": "4",
+      "value": "200",
+      "branch": {
+        "iftrue": "4",
+        "iffalse": "0",
+        "iftrueVal": "nonum"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "4",
+      "varName2": "",
+      "branch": {
+        "iftrue": "0",
+        "iffalse": "4",
+        "iffalseVal": "novc"
+      },
+      "name": "Check If Member"
+    },
+    {
+      "member": "2",
+      "varName": "robot",
+      "info": "4",
+      "varName2": "",
+      "branch": {
+        "iftrue": "0",
+        "iffalse": "4",
+        "iffalseVal": "rbtnovc"
+      },
+      "name": "Check If Member"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Volume Changed",
+          "url": "",
+          "color": "",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "The volume has been set to ${slashParams(\"volume\")}",
+          "fields": [],
+          "author": "Brain created by Xeify",
+          "authorUrl": "",
+          "authorIcon": "https://cdn.discordapp.com/avatars/264126470002180099/f67861e74b7792dee02842f3ba4076a8.webp",
+          "footerText": "",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "action": "7",
+      "volume": "${slashParams(\"volume\")}",
+      "bitrate": "auto",
+      "name": "Control Music"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "anchorName": "nonum",
+      "name": "Action Anchor"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Please enter a valid number (between 1 and 200)",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [],
+      "reply": true,
+      "ephemeral": true,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "anchorName": "novc",
+      "name": "Action Anchor"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "You are not connected to a voice channel!",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [],
+      "reply": true,
+      "ephemeral": true,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "anchorName": "rbtnovc",
+      "name": "Action Anchor"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Brain is not connected to a voice channel!",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [],
+      "reply": true,
+      "ephemeral": true,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "anchorName": "noplay",
+      "name": "Action Anchor"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Brain is not currently playing music in a voice channel!",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [],
+      "reply": true,
+      "ephemeral": true,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    }
+  ],
+  "comType": "4",
+  "parameters": [
+    {
+      "name": "volume",
+      "description": "Changes the volume of the music currently in the queue.",
+      "type": "INTEGER",
+      "required": true,
+      "choices": null
+    }
+  ],
+  "description": "Changes the volume of the music bot"
+}

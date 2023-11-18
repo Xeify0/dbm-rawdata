@@ -1,0 +1,24 @@
+{
+  "name": "Music Disconnect/Kick etc...",
+  "temp": "ooga",
+  "event-type": "0",
+  "_id": "EoPHx",
+  "actions": [
+    {
+      "action": "0",
+      "name": "Control Audio"
+    },
+    {
+      "action": "0",
+      "volume": "",
+      "bitrate": "auto",
+      "name": "Control Music"
+    },
+    {
+      "action": "5",
+      "volume": "",
+      "bitrate": "auto",
+      "name": "Control Music"
+    }
+  ]
+}

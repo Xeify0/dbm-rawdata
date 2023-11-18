@@ -1,0 +1,369 @@
+{
+  "name": "loop",
+  "permissions": "NONE",
+  "permissions2": "NONE",
+  "restriction": "1",
+  "_id": "uoKDc",
+  "actions": [
+    {
+      "queueObject": null,
+      "varName0": null,
+      "info": "2",
+      "storage": "1",
+      "varName": "isplaying",
+      "name": "Store Queue Info"
+    },
+    {
+      "storage": "2",
+      "varName": "playing",
+      "comparison": "1",
+      "value": "false",
+      "branch": {
+        "iftrue": "4",
+        "iffalse": "0",
+        "iftrueVal": "noplay"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "4",
+      "varName2": "",
+      "branch": {
+        "iftrue": "0",
+        "iffalse": "4",
+        "iffalseVal": "novc"
+      },
+      "name": "Check If Member"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "storage": "1",
+      "varName2": "robot",
+      "name": "Get Bot as Member"
+    },
+    {
+      "member": "2",
+      "varName": "robot",
+      "info": "4",
+      "varName2": "",
+      "branch": {
+        "iftrue": "0",
+        "iffalse": "4",
+        "iffalseVal": "rbtnovc"
+      },
+      "name": "Check If Member"
+    },
+    {
+      "storage": "4",
+      "varName": "type",
+      "comparison": "1",
+      "value": "1",
+      "branch": {
+        "iftrue": "4",
+        "iffalse": "0",
+        "iftrueVal": "queue"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "storage": "4",
+      "varName": "type",
+      "comparison": "1",
+      "value": "2",
+      "branch": {
+        "iftrue": "4",
+        "iffalse": "0",
+        "iftrueVal": "track"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "storage": "4",
+      "varName": "type",
+      "comparison": "1",
+      "value": "3",
+      "branch": {
+        "iftrue": "4",
+        "iffalse": "0",
+        "iftrueVal": "loop"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "storage": "4",
+      "varName": "type",
+      "comparison": "1",
+      "value": "4",
+      "branch": {
+        "iftrue": "4",
+        "iffalse": "0",
+        "iftrueVal": "loopoff"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "comment": "Loop Off",
+      "color": "#f5ed00",
+      "name": "Comment"
+    },
+    {
+      "anchorName": "loopoff",
+      "name": "Action Anchor"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "`⏩ Loop disabled for queue.`\n",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [],
+      "reply": true,
+      "ephemeral": true,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "1",
+      "varName2": "stopsongdel",
+      "name": "Send Message"
+    },
+    {
+      "action": "0",
+      "name": "Set Music Repeat Mode"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "comment": "AutoPlay Loop",
+      "color": "#f5ed00",
+      "name": "Comment"
+    },
+    {
+      "anchorName": "loop",
+      "name": "Action Anchor"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "`⏩ Autoplay mode enabled for queue.`\n",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [],
+      "reply": true,
+      "ephemeral": true,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "1",
+      "varName2": "stopsongdel",
+      "name": "Send Message"
+    },
+    {
+      "action": "3",
+      "name": "Set Music Repeat Mode"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "comment": "Loop Track",
+      "color": "#f5ed00",
+      "name": "Comment"
+    },
+    {
+      "anchorName": "track",
+      "name": "Action Anchor"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "`⏩ Looping Track.`\n",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [],
+      "reply": true,
+      "ephemeral": true,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "1",
+      "varName2": "stopsongdel",
+      "name": "Send Message"
+    },
+    {
+      "action": "1",
+      "name": "Set Music Repeat Mode"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "comment": "Loop Queue ",
+      "color": "#f5ed00",
+      "name": "Comment"
+    },
+    {
+      "anchorName": "queue",
+      "name": "Action Anchor"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "`⏩ Looping queue.`\n",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [],
+      "reply": true,
+      "ephemeral": true,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "1",
+      "varName2": "stopsongdel",
+      "name": "Send Message"
+    },
+    {
+      "action": "2",
+      "name": "Set Music Repeat Mode"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "comment": "No Connect VC",
+      "color": "#f5ed00",
+      "name": "Comment"
+    },
+    {
+      "anchorName": "novc",
+      "name": "Action Anchor"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "You are not connected to a voice channel!",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [],
+      "reply": true,
+      "ephemeral": true,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "comment": "No Bot Connect VC",
+      "color": "#f5ed00",
+      "name": "Comment"
+    },
+    {
+      "anchorName": "rbtnovc",
+      "name": "Action Anchor"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Brain is not connected to a voice channel!",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [],
+      "reply": true,
+      "ephemeral": true,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "comment": "Not playing music",
+      "color": "#f5ed00",
+      "name": "Comment"
+    },
+    {
+      "anchorName": "noplay",
+      "name": "Action Anchor"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Brain is not currently playing music in a voice channel!",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [],
+      "reply": true,
+      "ephemeral": true,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    }
+  ],
+  "comType": "4",
+  "description": "Shuffles music queue",
+  "parameters": [
+    {
+      "name": "type",
+      "description": "",
+      "type": "STRING",
+      "required": true,
+      "choices": [
+        {
+          "name": "queue",
+          "value": "1"
+        },
+        {
+          "name": "track",
+          "value": "2"
+        },
+        {
+          "name": "autoplay",
+          "value": "3"
+        },
+        {
+          "name": "off",
+          "value": "4"
+        }
+      ]
+    }
+  ]
+}

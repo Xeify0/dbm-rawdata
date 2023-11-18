@@ -1,0 +1,391 @@
+{
+  "name": "play",
+  "permissions": "NONE",
+  "permissions2": "NONE",
+  "restriction": "1",
+  "_id": "CtRcj",
+  "actions": [
+    {
+      "queueObject": null,
+      "varName0": null,
+      "info": "2",
+      "storage": "1",
+      "varName": "isplaying",
+      "name": "Store Queue Info"
+    },
+    {
+      "storage": "2",
+      "varName": "playing",
+      "comparison": "1",
+      "value": "false",
+      "branch": {
+        "iftrue": "0",
+        "iffalse": "3",
+        "iffalseVal": "1"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "source": "EoPHx",
+      "type": "true",
+      "name": "Call Command/Event"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Attempting to play your song...",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [],
+      "reply": true,
+      "ephemeral": true,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "2",
+      "varName": "bot_pause",
+      "changeType": "0",
+      "value": "1",
+      "name": "Control Variable"
+    },
+    {
+      "storage": "2",
+      "varName": "bot_pause",
+      "name": "Save Variable"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "4",
+      "varName2": "",
+      "branch": {
+        "iftrue": "2",
+        "iffalse": "0",
+        "iftrueVal": "10"
+      },
+      "name": "Check If Member"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Please log in to the voice channel!",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "name": "Join Voice Channel"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=${slashParams(\"title\")}&type=video&key=AIzaSyCkmlUY1vKNhf1Ks2LkTR1__GZh_KiA6WY",
+      "path": "items[0].id.videoId",
+      "storage": "1",
+      "varName": "ID",
+      "debugMode": "1",
+      "headers": "",
+      "reUse": "1",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=${slashParams(\"title\")}&type=video&key=AIzaSyCkmlUY1vKNhf1Ks2LkTR1__GZh_KiA6WY",
+      "path": "items[0].snippet.title",
+      "storage": "1",
+      "varName": "title",
+      "debugMode": "1",
+      "headers": "",
+      "reUse": "1",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=${slashParams(\"title\")}&type=video&key=AIzaSyCkmlUY1vKNhf1Ks2LkTR1__GZh_KiA6WY",
+      "path": "items[0].snippet.thumbnails.high.url",
+      "storage": "1",
+      "varName": "thumbnails",
+      "debugMode": "1",
+      "headers": "",
+      "reUse": "1",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://www.googleapis.com/youtube/v3/videos?id=${tempVars(\"ID\")}&part=contentDetails&key=AIzaSyCkmlUY1vKNhf1Ks2LkTR1__GZh_KiA6WY",
+      "path": "items[0].contentDetails.duration",
+      "storage": "1",
+      "varName": "duration",
+      "debugMode": "1",
+      "headers": "",
+      "reUse": "1",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "storage": "1",
+      "varName": "duration",
+      "conversion": "2",
+      "storage2": "1",
+      "varName2": "durationSTRING",
+      "name": "Convert Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "durationSTRING",
+      "info": "1",
+      "info2": "PT",
+      "value": "",
+      "storage2": "1",
+      "varName2": "durationSTRING",
+      "name": "Variable Pattern MOD"
+    },
+    {
+      "storage": "1",
+      "varName": "durationSTRING",
+      "info": "1",
+      "info2": "H",
+      "value": " hours ",
+      "storage2": "1",
+      "varName2": "durationSTRING",
+      "name": "Variable Pattern MOD"
+    },
+    {
+      "storage": "1",
+      "varName": "durationSTRING",
+      "info": "1",
+      "info2": "M",
+      "value": " minutes ",
+      "storage2": "1",
+      "varName2": "durationSTRING",
+      "name": "Variable Pattern MOD"
+    },
+    {
+      "storage": "1",
+      "varName": "durationSTRING",
+      "info": "1",
+      "info2": "S",
+      "value": " seconds ",
+      "storage2": "1",
+      "varName2": "durationSTRING",
+      "name": "Variable Pattern MOD"
+    },
+    {
+      "query": "${slashParams(\"title\")}",
+      "voiceChannel": "0",
+      "varName": "",
+      "storage": "2",
+      "varName2": "playing",
+      "type": "0",
+      "volume": "45",
+      "leaveOnEmpty": true,
+      "leaveOnEnd": true,
+      "name": "Play Music"
+    },
+    {
+      "queueObject": null,
+      "varName0": null,
+      "info": "6",
+      "storage": "1",
+      "varName": "1",
+      "name": "Store Queue Info"
+    },
+    {
+      "trackObject": "1",
+      "varName": "1",
+      "info": "5",
+      "storage": "1",
+      "varName1": "user2",
+      "name": "Store Track Info"
+    },
+    {
+      "trackObject": "1",
+      "varName": "1",
+      "info": "1",
+      "storage": "1",
+      "varName1": "trackthumb",
+      "name": "Store Track Info"
+    },
+    {
+      "trackObject": "1",
+      "varName": "1",
+      "info": "3",
+      "storage": "1",
+      "varName1": "trackauth",
+      "name": "Store Track Info"
+    },
+    {
+      "trackObject": "1",
+      "varName": "1",
+      "info": "5",
+      "storage": "1",
+      "varName1": "user3",
+      "name": "Store Track Info"
+    },
+    {
+      "member": "2",
+      "varName": "user3",
+      "info": "2",
+      "storage": "1",
+      "varName2": "membername",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "2",
+      "varName": "user2",
+      "info": "31",
+      "storage": "1",
+      "varName2": "avatarpic",
+      "name": "Store Member Info"
+    },
+    {
+      "queueObject": null,
+      "varName0": null,
+      "info": "4",
+      "storage": "1",
+      "varName": "progress",
+      "name": "Store Queue Info"
+    },
+    {
+      "storage": "4",
+      "varName": "title",
+      "comparison": "5",
+      "value": "playlist",
+      "branch": {
+        "iftrue": "4",
+        "iffalse": "0",
+        "iftrueVal": "playlist"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Added to Queue",
+          "url": "",
+          "color": "",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "${tempVars(\"trackthumb\")}",
+          "description": "**[${tempVars(\"title\")}](https://www.youtube.com/watch?v=${tempVars(\"ID\")})**\n${tempVars(\"progress\")}\n\n`Requested by` ${tempVars(\"user2\")}",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "Source: ${tempVars(\"trackauth\")}",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "anchorName": "playlist",
+      "name": "Action Anchor"
+    },
+    {
+      "trackObject": "1",
+      "varName": "1",
+      "info": "4",
+      "storage": "1",
+      "varName1": "testduration",
+      "name": "Store Track Info"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Added Playlist to Queue",
+          "url": "",
+          "color": "",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "${tempVars(\"trackthumb\")}",
+          "description": "**[Playlist Link](${slashParams(\"title\")})**\nFirst Video Duration: ${tempVars(\"testduration\")}\n\n`Requested by` ${tempVars(\"user2\")}",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "Source(first song): ${tempVars(\"trackauth\")}",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    }
+  ],
+  "comType": "4",
+  "parameters": [
+    {
+      "name": "title",
+      "description": "YouTube video title or link.",
+      "type": "STRING",
+      "required": true,
+      "choices": null
+    }
+  ],
+  "description": "Plays a song by URL or by search."
+}
