@@ -11,6 +11,10 @@
 
 > [!NOTE]
 > The music system is synced together, and requires each other to work. Utilize each commmand/event or configure it properly to make it work.
+>
+> AN API KEY IS REQUIRED FOR THE PLAY COMMAND TO WORK PROPERLY
+> 
+> Create an api key here: https://console.cloud.google.com/apis/library/youtube.googleapis.com?authuser=1&project=nobis-hosting and replace the key already in the command.
 
 ### Changelog 11/18/23
 
