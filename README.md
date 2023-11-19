@@ -1,7 +1,7 @@
 ![image](https://github.com/Xeify0/dbm-rawdata/assets/29692306/dbdfd182-c75d-49b3-b601-965974565449)
 # Xeify's Raw Data for Discord Bot Maker
 #### If you like this resource please consider **staring it** :) 
-### If you're feeling generous you can donate here: https://buy.stripe.com/9AQcQg4Ev2uCeA0144
+#### If you're feeling generous you can donate here: https://buy.stripe.com/9AQcQg4Ev2uCeA0144
 > I've created this github to include any missing information, and give back to the community.
 > If you were linked here odds are you should be reading the information below.
 
