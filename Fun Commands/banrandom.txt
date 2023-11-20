@@ -1,0 +1,178 @@
+{
+  "name": "banrandom",
+  "permissions": "NONE",
+  "permissions2": "NONE",
+  "restriction": "1",
+  "_id": "EZkcc",
+  "actions": [
+    {
+      "list": "0",
+      "varName": "",
+      "getType": "2",
+      "position": "2",
+      "storage": "1",
+      "varName2": "random",
+      "name": "Get Item from List"
+    },
+    {
+      "member": "2",
+      "varName": "random",
+      "info": "1",
+      "storage": "1",
+      "varName2": "idofmember",
+      "name": "Store Member Info"
+    },
+    {
+      "storage": "1",
+      "varName": "idofmember",
+      "comparison": "1",
+      "value": "264126470002180099",
+      "branch": {
+        "iftrue": "99",
+        "iffalse": "2",
+        "iftrueActions": [
+          {
+            "channel": "0",
+            "varName": "",
+            "message": "",
+            "buttons": [],
+            "selectMenus": [],
+            "attachments": [],
+            "embeds": [
+              {
+                "title": "Random Ban (v.1)",
+                "url": "",
+                "color": "",
+                "timestamp": "false",
+                "imageUrl": "",
+                "thumbUrl": "",
+                "description": "The bot would've banned Xeify however they're the bot owner.\nCommand overridden.",
+                "fields": [],
+                "author": "",
+                "authorUrl": "",
+                "authorIcon": "",
+                "footerText": "",
+                "footerIconUrl": ""
+              }
+            ],
+            "reply": true,
+            "ephemeral": false,
+            "tts": false,
+            "overwrite": false,
+            "dontSend": false,
+            "editMessage": "0",
+            "editMessageVarName": "",
+            "storage": "0",
+            "varName2": "",
+            "name": "Send Message"
+          }
+        ],
+        "iffalseVal": "5"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "member": "2",
+      "varName": "idofmember",
+      "permission": "ADMINISTRATOR",
+      "branch": {
+        "iftrue": "4",
+        "iffalse": "0",
+        "iftrueVal": "failed"
+      },
+      "name": "Check Member Permissions"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Random Ban (v.1)",
+          "url": "",
+          "color": "",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "Banning ${tempVars(\"random\")}",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": true,
+      "ephemeral": true,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "member": "2",
+      "varName": "random",
+      "reason": "Random banned L",
+      "days": "",
+      "name": "Ban Member"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "anchorName": "failed",
+      "name": "Action Anchor"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Random Ban (v.1)",
+          "url": "",
+          "color": "",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "The bot would've banned ${tempVars(\"random\") however they are unbannable.\nCommand overridden.",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    }
+  ],
+  "comType": "4",
+  "parameters": []
+}

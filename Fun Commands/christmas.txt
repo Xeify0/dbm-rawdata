@@ -1,0 +1,188 @@
+{
+  "name": "christmas",
+  "permissions": "NONE",
+  "permissions2": "NONE",
+  "restriction": "1",
+  "_id": "mEMGk",
+  "actions": [
+    {
+      "type": "1",
+      "storage": "1",
+      "varName": "month",
+      "name": "Store Time Info"
+    },
+    {
+      "storage": "1",
+      "varName": "month",
+      "comparison": "1",
+      "value": "11",
+      "branch": {
+        "iftrue": "0",
+        "iffalse": "4",
+        "iffalseVal": "not11"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "type": "2",
+      "storage": "1",
+      "varName": "novday",
+      "name": "Store Time Info"
+    },
+    {
+      "FirstNumber": "30",
+      "info": "1",
+      "SecondNumber": "${tempVars(\"novday\")}",
+      "storage": "1",
+      "varName": "daysleft",
+      "name": "Basic Math Operation"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "",
+          "url": "",
+          "color": "",
+          "timestamp": "true",
+          "imageUrl": "https://imgs.search.brave.com/rxfEMZfmnMKPPsy20I56lA-sRkbAkkLzv9enKEuIKHg/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/a2luZ29mY2hyaXN0/bWFzLmNvbS9jZG4v/c2hvcC9jb2xsZWN0/aW9ucy9CLmpwZz92/PTE2OTYzMzc5Mzgm/d2lkdGg9MTA4MA",
+          "thumbUrl": "",
+          "description": "",
+          "fields": [
+            {
+              "name": "Christmas is",
+              "value": "```God’s love. Your parents love. Your life. You are not alone. You are loved, and you can feel hopeful and joyful this Christmas. That is the true meaning of Christmas.```\n",
+              "inline": "true"
+            },
+            {
+              "name": "Days Till Presents",
+              "value": "```${Math.floor((new Date(\"12/25/2023\").getTime()-new Date().getTime())/(1000 * 3600 * 24))} days```",
+              "inline": "true"
+            }
+          ],
+          "author": "Christmas Countdown",
+          "authorUrl": "",
+          "authorIcon": "https://cdn.discordapp.com/avatars/289558912208994315/6227fa9a3212866aed2408f1ff415296.png?size=4096",
+          "footerText": "",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "anchorName": "not11",
+      "name": "Action Anchor"
+    },
+    {
+      "storage": "1",
+      "varName": "month",
+      "comparison": "1",
+      "value": "12",
+      "branch": {
+        "iftrue": "0",
+        "iffalse": "4",
+        "iffalseVal": "disabled"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "type": "1",
+      "storage": "1",
+      "varName": "month",
+      "name": "Store Time Info"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "",
+          "url": "",
+          "color": "",
+          "timestamp": "true",
+          "imageUrl": "https://imgs.search.brave.com/rxfEMZfmnMKPPsy20I56lA-sRkbAkkLzv9enKEuIKHg/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/a2luZ29mY2hyaXN0/bWFzLmNvbS9jZG4v/c2hvcC9jb2xsZWN0/aW9ucy9CLmpwZz92/PTE2OTYzMzc5Mzgm/d2lkdGg9MTA4MA",
+          "thumbUrl": "",
+          "description": "",
+          "fields": [
+            {
+              "name": "Christmas is",
+              "value": "```God’s love. Your parents love. Your life. You are not alone. You are loved, and you can feel hopeful and joyful this Christmas. That is the true meaning of Christmas.```\n",
+              "inline": "true"
+            },
+            {
+              "name": "Days Till Presents",
+              "value": "```${Math.floor((new Date(\"12/25/2023\").getTime()-new Date().getTime())/(1000 * 3600 * 24))} days```",
+              "inline": "true"
+            }
+          ],
+          "author": "Christmas Countdown",
+          "authorUrl": "",
+          "authorIcon": "https://cdn.discordapp.com/avatars/289558912208994315/6227fa9a3212866aed2408f1ff415296.png?size=4096",
+          "footerText": "",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "anchorName": "disabled",
+      "name": "Action Anchor"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "This command is only useable during November Or December. ",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [],
+      "reply": true,
+      "ephemeral": true,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    }
+  ],
+  "comType": "4"
+}
