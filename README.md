@@ -6,7 +6,7 @@
 > If you were linked here odds are you should be reading the information below.
 
 <p align="left">
-<img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/discord.svg" alt="Xeify#9155" height="30" width="40" /></a> For support join our discord: https://discord.gg/W3jWWdDWsx
+<img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/discord.svg" alt="Xeify#9155" height="30" width="40" /></a> For support join our discord: https://discord.gg/W3jWWdDWsx -- You can also purchase custom commands, hosting, and/or custom bots in this discord.
 </p>
 
 
